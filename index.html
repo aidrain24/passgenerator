@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+    <title>Password Gen</title>
+    <link rel="icon" href="./res/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ba505e1af7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <!--<h1>Testing page 2.0</h>-->
+    <br>
+    <div class="textbox">
+        <h1>Password Generator</h1>
+        <div class="result-container">
+            <label for="output" class="lable">Generated Password</label><br>
+            <input type="text" id="output" value="Ready" disabled><br>
+            <br>
+            <button class="btn" id="clipboard">Copy
+                <i class="far fa-clipboard"></i>
+            </button>
+            <button class="btn" id="clear">Clear
+                <i class="fas fa-snowplow"></i>
+            </button>
+            <br><br>
+            <hr>
+        </div>
+        <!--End results container-->
+        <div class="settings">
+            <p>Settings:</p>
+            <div class="setting">
+                <label for="length">Password length</label>
+                <input type="range" min="1" max="50" value="10" id="characterAmountRange">
+                <input type="number" id="length" min="1" max="50" value="20"/>
+            </div>
+            <!--End of Password length-->
+            <div class="setting">
+                <label for="lowercase">Include lowercase</label>
+                <input type="checkbox" id="lowercase" checked/>
+            </div>
+            <!--End of lowercase-->
+            <div class="setting">
+                <label for="uppercase">Include Uppercase</label>
+                <input type="checkbox" id="uppercase" checked/>
+            </div>
+            <!--End of uppercase-->
+            <div class="setting">
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" id="numbers" checked/>
+            </div>
+            <!--End of numbers--> 
+            <div class="setting">
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" id="symbols" checked/>
+            </div>
+            <!--End of symbols-->
+        </div><!--End settings-->
+        <br>
+        <button class="btn-large" id="generate">Generate Password 
+            <i class="fas fa-key"></i>
+        </button>
+        <div class="result-container">
+            <br>
+            <button class="btn" id="help" onclick="functionAlert()">Help
+            </button>
+            <button class="btn" id="about" onclick="functionabout()">About Us
+            </button>
+            <br><br>
+        </div>
+    </div> 
+    <div id="confirm">
+        <div class="message">Help <br>
+            1. Simply drag the "Password Length" according to password character you want.<br>
+            2. Then click the checkbox to be included in password generator<br>
+            3. Simply press the "Generate Password" button and you can see your Password. <br>
+            4. Click the "Copy" button and paste it into your prefered text editor.
+        </div><br>
+        <button class="yes">OK</button>
+     </div>
+     <div id="aboutus">
+        <div class="message1">
+            <div class="about-section">
+                <h1>About Us Page</h1>
+                <p>Some text about who we are and what we do.</p>
+                <p>Resize the browser window to see that this page is responsive by the way.</p>
+              </div>
+              <h2 style="text-align:center">Our Team</h2>
+              <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <img src="/pic/aid.jpg" alt="Aidrain" style="width:100%">
+                    <div class="container">
+                      <h2>Aidrain Alcantara</h2>
+                      <p class="title">Group Leader</p>
+                      <p>Bachelor of Science in Computer Science</p>
+                      <p>aidrainalcantara@gmail.com</p>
+                      <p><button class="button1" onclick="window.open('https://web.facebook.com/aidrain24/')">Contact</button></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="card">
+                    <img src="/pic/carla.jpg" alt="Carla" style="width:100%">
+                    <div class="container">
+                      <h2>CarlaJean Batobalonos</h2>
+                      <p class="title">Member</p>
+                      <p>Bachelor of Science in Computer Science</p>
+                      <p>mike@example.com</p>
+                      <p><button class="button1" onclick="window.open('https://web.facebook.com/carlajean.batobalonos')">Contact</button></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column">
+                  <div class="card">
+                    <img src="/pic/windenver.jpg" alt="Windenver" style="width:100%">
+                    <div class="container">
+                      <h2>Windenver Consigo</h2>
+                      <p class="title">Member</p>
+                      <p>Bachelor of Science in Computer Science</p>
+                      <p>john@example.com</p>
+                      <p><button class="button1" onclick="window.open('https://web.facebook.com/WindenverConsigo07')">Contact</button></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="card">
+                    <img src="/pic/mc.jpg" alt="McTracy" style="width:100%">
+                    <div class="container">
+                      <h2>Mctracy Bernardo</h2>
+                      <p class="title">Member</p>
+                      <p>Bachelor of Science in Computer Science</p>
+                      <p>john@example.com</p>
+                      <p><button class="button1" onclick="window.open('https://web.facebook.com/mctracy.bernardo')">Contact</button></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                      <img src="/pic/harprit.jpg" alt="John" style="width:100%">
+                      <div class="container">
+                        <h2>Harprit Singh</h2>
+                        <p class="title">Member</p>
+                        <p>Bachelor of Science in Computer Science</p>
+                        <p>john@example.com</p>
+                        <p><button class="button1" onclick="window.open('https://web.facebook.com/tapyett')">Contact</button></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <button class="yes1">OK</button>
+        </div><br>
+     </div>
+  </body>
+    <script src="js/script.js"></script>
+
+</html>
